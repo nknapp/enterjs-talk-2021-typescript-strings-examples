@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+# TypeScript kann auch Strings - EnterJS 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the code-examples of my talk at the EnterJS 2021.
+To try it out, clone the repo, run `yarn install` and open it in and IDE of your choice.
 
-## Available Scripts
+You can also run `yarn start` to start a webpack-dev-server. This is a create-react-app after all.
 
-In the project directory, you can run:
+# Why TypeScript?
 
-### `yarn start`
+Why do I favor TypeScript over JavaScript? 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* [no-types-js](./src/01-why-typescript/no-types.js) shows you nothing about
+  the data that is expected. You have to look for it.
+* [with-types.ts](./src/01-why-typescript/with-types.ts) contains all the information about the "book".
+  Like doc-comments, but checked by the compiler. And you get auto-completion and compile-time feedback.
+  
+# Example files
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The example files are roughly in the same order as they appear in the presentation.
+There are some additional examples in here, so don't be confused.
 
-### `yarn test`
+# Further reading
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+* [OpenAPI Client Axios](https://github.com/anttiviljami/openapi-client-axios) is an http-client based on
+  axios that can generate types from an openapi-spec.
+* [SQL Validator in TypeScript](https://github.com/codemix/ts-sql)
+* [How react-i18next realizes configurable types](https://github.com/i18next/react-i18next/blob/master/ts4.1/index.d.ts#L49-L60)

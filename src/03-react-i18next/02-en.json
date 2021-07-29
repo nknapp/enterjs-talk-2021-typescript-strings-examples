@@ -1,0 +1,4 @@
+{
+  "hello.world": "Hello world",
+  "my.greeting": "Hello {{you}}, my name is {{me}}!"
+}
