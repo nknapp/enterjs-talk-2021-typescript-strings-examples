@@ -16,16 +16,21 @@ type Params<Path extends string> = Record<
   string | number
 >;
 
+const params: Params<"/data/citation/{format}/{query}"> = {
+  query: 1,
+  format: "test",
+};
+
 // Create a function that has a valid path as first parameter. The form of the
 // params-object is determined by the used path. "T" is derived by the compiler
-async function fetchFromApi<T extends Paths>(path: T, params: Params<T>): Promise<void> {
+function fetchFromApi<T extends Paths>(path: T, params: Params<T>) {
   /* ... */
 }
 
 fetchFromApi("/data/citation/{format}/{query}", {
-    query: 1,
-    format: "test"
-})
+  query: 1,
+  format: "test",
+});
 
 //-- fetchFromApi("/page/lint/{title}/{revision}", {
 //--     title: "Some title",
