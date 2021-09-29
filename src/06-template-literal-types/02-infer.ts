@@ -1,11 +1,10 @@
-
 // We can use "infer" to extract part of the string
 type Greeting<You extends string> = `Hello ${You}, my name is ${string}.`;
 
 // infer the generic variable
-type Extract<G> = G extends Greeting<infer Y> ? Y :never
+type Extract<G> = G extends Greeting<infer Y> ? Y : never;
 
-const max: Extract<"Hello Max, my name is Nils."> = "Max"
+const max: Extract<"Hello Max, my name is Nils."> = "Max";
 //-- const wrong: ExtractYou<"Hello Max, my name is Nils"> = "asdasd"
 
 // --------------------------
