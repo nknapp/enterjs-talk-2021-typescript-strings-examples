@@ -7,7 +7,7 @@ export {};
 const zipCodes = {
   "64283": "Darmstadt",
   "10117": "Berlin",
-} as const;
+};
 
 type ZipCodeToCity = typeof zipCodes;
 
