@@ -2,17 +2,25 @@
 export {};
 
 // "keyof" can be used to create a union type containing all possible keys of an interface.
-interface ColorMap {
-  "red": string;
-  "green": string;
+export interface Person {
+  "name": string;
+  age: number
 }
 
-type ColorKey = keyof ColorMap;
+const people: Person[] = [
+  { name: "Max", age: 24},
+  { name: "Nina", age: 22}
+]
 
-function getColor(key: ColorKey): string {
-  return "mock";
+function sortBy<T>(entities: T[], property: string): T[] {
+  return []
 }
 
-getColor("green");
-getColor("red");
-//-- getColor("other key");
+sortBy(people, "blurp")
+
+function typedSortBy<T>(entities: T[], property: keyof T): T[] {
+  return [] // TODO: implement
+}
+
+typedSortBy(people, "age")
+

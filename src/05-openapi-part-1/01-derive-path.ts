@@ -1,4 +1,4 @@
-import {WikipediaApi} from "src/05-openapi-part-1/00-wikimedia";
+    import {WikipediaApi} from "src/05-openapi-part-1/00-wikimedia";
 
 type Spec = typeof WikipediaApi;
 type Paths = keyof Spec["paths"];
